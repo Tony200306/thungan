@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./CSS_folder/expo.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuyển Dụng - Cơ Hội Nghề Nghiệp</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .headerBox {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .headerBox h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .headerBox p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .job-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e1e8ed;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .job-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .job-headerBox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .job-logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+
+        .job-info h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .job-company {
+            color: #7f8c8d;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .job-details {
+            margin: 15px 0;
+        }
+
+        .job-tag {
+            display: inline-block;
+            background: #e8f4fd;
+            color: #2980b9;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 5px 5px 5px 0;
+            font-weight: 500;
+        }
+
+        .job-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .job-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .job-description {
+            color: #555;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .headerBox h1 {
+                font-size: 2rem;
+            }
+
+            .job-headerBox {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .job-logo {
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="header" style="align-items: center;">
+            <img src="./photos/icon.png" alt="" class="logo">
+            <a href="">
+                <p class="title">Khám phá</p>
+            </a>
+            <input style="height: 50px!important" type="text" class="search" placeholder="Search for Anything"><i
+                class="fa-light fa-magnifying-glass"></i>
+            <a href="./courses.html">
+                <p class="plan">Các khóa học</p>
+            </a>
+            <a href="contact-udemy.html">
+                <p class="business">Tuyển dụng</p>
+            </a>
+            <a href="">
+                <p class="tech">Cộng đồng</p>
+            </a>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="login-page.html"><button class="log">Đăng nhập</button></a>
+            <a href="udemy_sign_up.html"><button class="sing">Đăng ký</button></a>
+            <button class="web"><i class="fa-solid fa-globe"></i></button>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="headerBox">
+            <h1>Cơ Hội Nghề Nghiệp</h1>
+            <p>Khám phá các vị trí tuyển dụng hấp dẫn từ các công ty hàng đầu</p>
+        </div>
+
+        <div class="job-card">
+            <div class="job-headerBox">
+                <div class="job-logo">BA</div>
+                <div class="job-info">
+                    <h3>Thực Tập Sinh Phân Tích Kinh Doanh</h3>
+                    <div class="job-company">FPT Digital</div>
+                </div>
+            </div>
+            <div class="job-details">
+                <span class="job-tag">Business Analyst</span>
+                <span class="job-tag">Thực Tập Sinh</span>
+                <span class="job-tag">Phân Tích Dữ Liệu</span>
+            </div>
+            <div class="job-description">
+                Cơ hội thực tập tại FPT Digital với vai trò Business Analyst, phát triển kỹ năng phân tích kinh doanh và
+                tư vấn số.
+            </div>
+            <a href="https://digital.fpt.com/career/thuc-tap-sinh-phan-tich-kinh-doanh#:~:text=Th%E1%BB%B1c%20t%E1%BA%ADp%20sinh%20Business%20Analyst%20l%C3%A0%20m%E1%BB%99t%20ph%E1%BA%A7n%20quan%20tr%E1%BB%8Dng,trong%20m%E1%BA%A3ng%20t%C6%B0%20v%E1%BA%A5n%20s%E1%BB%91."
+                class="job-link" target="_blank">Xem Chi Tiết</a>
+        </div>
+
+        <div class="job-card">
+            <div class="job-headerBox">
+                <div class="job-logo">BA</div>
+                <div class="job-info">
+                    <h3>Business Analyst</h3>
+                    <div class="job-company">FPT Software</div>
+                </div>
+            </div>
+            <div class="job-details">
+                <span class="job-tag">Business Analyst</span>
+                <span class="job-tag">Full-time</span>
+                <span class="job-tag">Phần Mềm</span>
+            </div>
+            <div class="job-description">
+                Vị trí Business Analyst tại FPT Software, tham gia phân tích yêu cầu và tối ưu hóa quy trình kinh doanh.
+            </div>
+            <a href="https://career.fpt-software.com/jobs/business-analyst-16/" class="job-link" target="_blank">Xem Chi
+                Tiết</a>
+        </div>
+
+        <div class="job-card">
+            <div class="job-headerBox">
+                <div class="job-logo">QA</div>
+                <div class="job-info">
+                    <h3>IT Tester</h3>
+                    <div class="job-company">TPBank</div>
+                </div>
+            </div>
+            <div class="job-details">
+                <span class="job-tag">Software Testing</span>
+                <span class="job-tag">Quality Assurance</span>
+                <span class="job-tag">Ngân Hàng</span>
+            </div>
+            <div class="job-description">
+                Cơ hội làm việc tại TPBank với vai trò IT Tester, đảm bảo chất lượng phần mềm và hệ thống ngân hàng.
+            </div>
+            <a href="https://tuyendung.tpb.vn/tuyen-dung-view/1367/" class="job-link" target="_blank">Xem Chi Tiết</a>
+        </div>
+
+        <div class="job-card">
+            <div class="job-headerBox">
+                <div class="job-logo">BA</div>
+                <div class="job-info">
+                    <h3>Business Analyst</h3>
+                    <div class="job-company">VTI</div>
+                </div>
+            </div>
+            <div class="job-details">
+                <span class="job-tag">Business Analyst</span>
+                <span class="job-tag">Công Nghệ</span>
+                <span class="job-tag">Phân Tích Hệ Thống</span>
+            </div>
+            <div class="job-description">
+                Tham gia phân tích và thiết kế hệ thống tại VTI, công ty công nghệ hàng đầu Việt Nam.
+            </div>
+            <a href="https://tuyendung.vti.com.vn/vi-VN/Career/JobDetail/2153" class="job-link" target="_blank">Xem Chi
+                Tiết</a>
+        </div>
+
+        <div class="job-card">
+            <div class="job-headerBox">
+                <div class="job-logo">IT</div>
+                <div class="job-info">
+                    <h3>IT Comtor</h3>
+                    <div class="job-company">VTI</div>
+                </div>
+            </div>
+            <div class="job-details">
+                <span class="job-tag">IT Comtor</span>
+                <span class="job-tag">Tiếng Nhật</span>
+                <span class="job-tag">Dịch Thuật</span>
+            </div>
+            <div class="job-description">
+                Vị trí IT Comtor tại VTI, hỗ trợ giao tiếp và dịch thuật trong các dự án công nghệ thông tin.
+            </div>
+            <a href="https://tuyendung.vti.com.vn/vi-VN/Career/JobDetail/2140" class="job-link" target="_blank">Xem Chi
+                Tiết</a>
+        </div>
+
+        <div class="job-card">
+            <div class="job-headerBox">
+                <div class="job-logo">MK</div>
+                <div class="job-info">
+                    <h3>Content Marketing Tiếng Trung</h3>
+                    <div class="job-company">PrepEdu</div>
+                </div>
+            </div>
+            <div class="job-details">
+                <span class="job-tag">Content Marketing</span>
+                <span class="job-tag">Tiếng Trung</span>
+                <span class="job-tag">Giáo Dục</span>
+            </div>
+            <div class="job-description">
+                Tạo nội dung marketing bằng tiếng Trung tại PrepEdu, phát triển thương hiệu và thu hút học viên.
+            </div>
+            <a href="https://careers.prepedu.com/job/content-community-executive-tieng-trung-full-time/"
+                class="job-link" target="_blank">Xem Chi Tiết</a>
+        </div>
+    </div>
+</body>
+
+</html>
+</div>
