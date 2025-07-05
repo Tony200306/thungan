@@ -47,6 +47,7 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s ease;
+            height: 100%;
         }
 
         .course-card:hover {
@@ -139,13 +140,20 @@
         .btn:hover {
             opacity: 0.8;
         }
+
+        .courses-container img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
     </style>
 </head>
 
 <body>
     <nav>
         <div class="header" style="align-items: center;">
-            <img src="./photos/icon.png" alt="" class="logo">
+            <a href="index.html"> <img src="./photos/icon.png" alt="" class="logo"></a>
+
             <a href="">
                 <p class="title">Khám phá</p>
             </a>
@@ -154,7 +162,7 @@
             <a href="./courses.html">
                 <p class="plan">Các khóa học</p>
             </a>
-            <a href="contact-udemy.html">
+            <a href="recruitment.html">
                 <p class="business">Tuyển dụng</p>
             </a>
             <a href="">
@@ -172,79 +180,83 @@
         </div>
 
         <div class="courses-container">
-            <div class="course-card">
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQDxANEA8QERAPDxAVFRgQDw8QEA8RFRUWFxcYFRcYHSghGBomHhUYITEiKSkrLjAuGB8/ODMsQyguLisBCgoKDg0OGxAQGy8lICUtLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAMgAyAMBEQACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABQYBAgQHA//EAEkQAAICAQEFAwcFDAgHAQAAAAECAAMEEQUGEiExE1GBBxQiQWFxkSMyVKHRFRYXQlNykpOis9LwMzQ1YnSCscElNkNSlMLhJP/EABsBAQACAwEBAAAAAAAAAAAAAAADBAECBQYH/8QALxEBAAICAQMEAAUEAQUAAAAAAAECAxEEEiExBRNBURQVIiNhMjNCUgY0cYGxwf/aAAwDAQACEQMRAD8A9xgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBiGCAhkglmAgICAgICAgICAgICAgICAgICAgaswAJJ0AHr5aTEzpmI2q20d9K0YrShs0/GLcK+HfObm9RrSf093VwelXv3vOnD9/L/kF/TP2SD80tP+Kz+TR/sffy/5Bf0z9kR6nMzrpYn0eIiZ6lzxbCyIzDhZlUkdxI5idik7iJcO8dMzD7TZqQEBAQEBAQEBAQEBAQEDEBHljwq229/cLFc1FntsU6EUgMFPcWJA19mstYuHkyKmXm46In8KuL9HyPhV/FJ/y6/2g/MafEH4VcX6PkfCr+KJ9OvEb2zHqNN94SO9m1icSnhBTzpQxDaBgnCDwn28xPPep5Pbjpel9IxRlv1z8KRPP+Xp9QQOnZmP2t9VWnzrFB92up+oSbBXrvFUHJv0YrWl6dtLalOMnHc4QdB1JY9wA6meom0Vh4bNyKY43aVcfyh4wOgquI79Kxr+1IvxFXOt6xi+Gv4RMf8AI3fCv+KPfhr+cU+Y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"
-                    alt="University Campus" class="course-image">
-                <div class="course-content">
-                    <div class="university-info">
-                        <div class="university-logo">🏛️</div>
-                        <div class="university-name">University of Colorado Boulder</div>
-                    </div>
-                    <h3 class="course-title">Master of Engineering in Engineering Management</h3>
-                    <div class="course-meta text-blue">
-                        <span>👁️ Nhận bằng</span>
-                    </div>
-                    <div class="course-meta">
-                        <span>Bằng cấp</span>
-                    </div>
+            <a href="https://mindx.edu.vn/course/it-business-analyst" target="_blank">
+                <div class="course-card">
+                    <img src="/photos/img1.png" alt="University Campus" class="course-image">
+                    <div class="course-content">
+                        <div class="university-info">
+                            <div class="university-logo">🏛️</div>
+                            <div class="university-name">MindX</div>
+                        </div>
+                        <h3 class="course-title">BA IT</h3>
+                        <div class="course-meta text-blue">
+                            <span>👁️ Nhận bằng</span>
+                        </div>
+                        <div class="course-meta">
+                            <span>Bằng cấp</span>
+                        </div>
 
-                </div>
-            </div>
-
-            <div class="course-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYlXEqk4UvxB6pBXSIa5jRiUwIEnzgct7pKA&s"
-                    alt="Student" class="course-image">
-                <div class="course-content">
-                    <div class="university-info">
-                        <div class="university-logo">🏛️</div>
-                        <div class="university-name">University of Illinois Urbana-Champaign</div>
-                    </div>
-                    <h3 class="course-title">Master of Business Administration (iMBA)</h3>
-                    <div class="course-meta text-blue ">
-                        <span>👁️ Nhận bằng</span>
-                    </div>
-                    <div class="course-meta">
-                        <span>Bằng cấp</span>
                     </div>
                 </div>
-            </div>
-
-            <div class="course-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_hdFr3LFCixL9bfEhmI4ZJMD3THp4QWRypw&s"
-                    alt="University Building" class="course-image">
-                <div class="course-content">
-                    <div class="university-info">
-                        <div class="university-logo">🏛️</div>
-                        <div class="university-name">University of Colorado Boulder</div>
-                    </div>
-                    <h3 class="course-title">Master of Science in Computer Science</h3>
-                    <div class="course-meta text-blue">
-                        <span>👁️ Nhận bằng</span>
-                    </div>
-                    <div class="course-meta">
-                        <span>Bằng cấp</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6gXEVlXrJfK8F4vCzbJIJZWe5evT19K0V0g&s"
-                    alt="Campus View" class="course-image">
-                <div class="course-content">
-                    <div class="university-info">
-                        <div class="""university-logo">🏛️</di <div class="university-name">University of Colorado
-                            Boulder
+            </a>
+            <a target="_blank"
+                href="https://funix.edu.vn/khoa-hoc-kiem-thu-phan-mem-tester-funix/?utm_source=GoogleAds&mid=HaNT2&utm_campaign=Tester01&utm_content=khoahoctester&gad_source=1&gad_campaignid=22294883202&gbraid=0AAAAAo6lGCm9REbc6FTfBKdFbzKTJvukd&gclid=Cj0KCQjw64jDBhDXARIsABkk8J7CPn3HoaUQPJwMU-5rZ0EkvC6xPr_GA3pNsmsCxk4vWGmgw_-ZEFkaAgxKEALw_wcB">
+                <div class="course-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYOwPuq2JGzSz1Lo5RVxjyQu-jrVFrcUgmAg&s"
+                        alt="">
+                    <div class="course-content">
+                        <div class="university-info">
+                            <div class="university-logo">🏛️</div>
+                            <div class="university-name">FPT Academy</div>
+                        </div>
+                        <h3 class="course-title">Master of Business Administration (iMBA)</h3>
+                        <div class="course-meta text-blue ">
+                            <span>👁️ Nhận bằng</span>
+                        </div>
+                        <div class="course-meta">
+                            <span>Bằng cấp</span>
                         </div>
                     </div>
-                    <h3 class="course-title">Master of Science in Electrical and Computer Engineering</h3>
-                    <div class="course-meta text-blue">
-                        <span>👁️ Nhận bằng</span>
-                    </div>
-                    <div class="course-meta">
-                        <span>Bằng cấp</span>
+                </div>
+            </a>
+            <a href="https://vtiacademy.edu.vn/khoa-hoc-ba.html" target="_blank">
+                <div class="course-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz4jV3U7cN5WwyFJmAUQU_wkXw3U7t3lfmDQ&s"
+                        alt="University Building" class="course-image">
+                    <div class="course-content">
+                        <div class="university-info">
+                            <div class="university-logo">🏛️</div>
+                            <div class="university-name">VTI</div>
+                        </div>
+                        <h3 class="course-title">BA IT</h3>
+                        <div class="course-meta text-blue">
+                            <span>👁️ Nhận bằng</span>
+                        </div>
+                        <div class="course-meta">
+                            <span>Bằng cấp</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
+            <a target="_blank" href="https://vtiacademy.edu.vn/khoa-hoc-it-comtor.html">
+                <div class="course-card">
+                    <img src="https://1900.com.vn/storage/uploads/companies/banner/17034/banner-cong-ty-co-phan-vti-10638-1744472272.jpg"
+                        alt="Campus View" class="course-image">
+                    <div class="course-content">
+                        <div class="university-info">
+                            <div class="university-logo">🏛️</div>
+                            <div class="university-name">VTI</div>
+                        </div>
+                        <h3 class="course-title">IT Comtor</h3>
+                        <div class="course-meta text-blue">
+                            <span>👁️ Nhận bằng</span>
+                        </div>
+                        <div class="course-meta">
+                            <span>Bằng cấp</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
             <div class="buttons">
                 <a href="#" class="btn-primary">Hiển thị thêm 8</a>
                 <a href="#" class="btn-secondary">Xem tất cả →</a>
@@ -257,78 +269,91 @@
         </div>
 
         <div class="courses-container">
-            <div class="course-card">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80"
-                    alt="Digital Marketing" class="course-image">
-                <div class="course-content">
-                    <div class="university-info">
-                        <div class="university-logo">🏛️</div>
-                        <div class="university-name">University of Pennsylvania</div>
-                    </div>
-                    <h3 class="course-title">Master of Marketing Digital và Social Media</h3>
-                    <div class="course-meta text-blue">
-                        <span>👁️ Nhận bằng</span>
-                    </div>
-                    <div class="course-meta">
-                        <span>Bằng cấp</span>
-                    </div>
+            <a href="https://web.mindx.edu.vn/khoa-hoc-full-stack-marketer?utm_channel=outbound&utm_source=google&utm_campaign=search&utm_medium=ypn&utm_content=fullstackmkt&gad_source=1&gad_campaignid=21000367897&gbraid=0AAAAABtLouWTG2EzRUFNtvgEjGUHiNZA6&gclid=Cj0KCQjw953DBhCyARIsANhIZoaSQbumiyF90W_RaljKpyYoRl0xl3pnnWFa7N74UGMSkhYlWNdODAsaAnuiEALw_wcB"
+                target="_blank">
+                <div class="course-card">
+                    <img src="/photos//img5.png" alt="Digital Marketing" class="course-image">
+                    <div class="course-content">
+                        <div class="university-info">
+                            <div class="university-logo">🏛️</div>
+                            <div class="university-name">MindX</div>
+                        </div>
+                        <h3 class="course-title">Full Stack Marketing</h3>
+                        <div class="course-meta text-blue">
+                            <span>👁️ Nhận bằng</span>
+                        </div>
+                        <div class="course-meta">
+                            <span>Bằng cấp</span>
+                        </div>
 
-                </div>
-            </div>
-
-            <div class="course-card">
-                <img src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
-                    alt="Brand Management" class="course-image">
-                <div class="course-content">
-                    <div class="university-info">
-                        <div class="university-logo">🏛️</div>
-                        <div class="university-name">Northwestern University</div>
-                    </div>
-                    <h3 class="course-title">Master of Brand Management và Strategy</h3>
-                    <div class="course-meta text-blue ">
-                        <span>👁️ Nhận bằng</span>
-                    </div>
-                    <div class="course-meta">
-                        <span>Bằng cấp</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="course-card">
-                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                    alt="Content Marketing" class="course-image">
-                <div class="course-content">
-                    <div class="university-info">
-                        <div class="university-logo">🏛️</div>
-                        <div class="university-name">Stanford University</div>
-                    </div>
-                    <h3 class="course-title">Master of Content Marketing và SEO</h3>
-                    <div class="course-meta text-blue">
-                        <span>👁️ Nhận bằng</span>
-                    </div>
-                    <div class="course-meta">
-                        <span>Bằng cấp</span>
+            <a href="https://www.tomorrowmarketers.org/content-marketing-course" target="_blank">
+                <div class="course-card">
+                    <img src="/photos//image11.png" alt="Digital Marketing" class="course-image">
+                    <div class="course-content">
+                        <div class="university-info">
+                            <div class="university-logo">🏛️</div>
+                            <div class="university-name">Tomorrowmarketers</div>
+                        </div>
+                        <h3 class="course-title">Content Marketing</h3>
+                        <div class="course-meta text-blue">
+                            <span>👁️ Nhận bằng</span>
+                        </div>
+                        <div class="course-meta">
+                            <span>Bằng cấp</span>
+                        </div>
+
                     </div>
                 </div>
-            </div>
+            </a>
+            <a href="https://khoahocre.com/wp-content/uploads/2025/03/mindx-digiral.png" target="_blank">
+                <div class="course-card">
+                    <img src="https://khoahocre.com/wp-content/uploads/2025/03/mindx-digiral.png"
+                        alt="Digital Marketing" class="course-image">
+                    <div class="course-content">
+                        <div class="university-info">
+                            <div class="university-logo">🏛️</div>
+                            <div class="university-name">MindX</div>
+                        </div>
+                        <h3 class="course-title">Digital Marketing</h3>
+                        <div class="course-meta text-blue">
+                            <span>👁️ Nhận bằng</span>
+                        </div>
+                        <div class="course-meta">
+                            <span>Bằng cấp</span>
+                        </div>
 
-            <div class="course-card">
-                <img src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                    alt="Marketing Analytics" class="course-image">
-                <div class="course-content">
-                    <div class="university-info">
-                        <div class="university-logo">🏛️</div>
-                        <div class="university-name">University of California Berkeley</div>
-                    </div>
-                    <h3 class="course-title">Master of Marketing Analytics và Data Science</h3>
-                    <div class="course-meta text-blue">
-                        <span>👁️ Nhận bằng</span>
-                    </div>
-                    <div class="course-meta">
-                        <span>Bằng cấp</span>
                     </div>
                 </div>
-            </div>
+            </a>
+
+
+
+            <a href="https://mindx.edu.vn/course/khoa-hoc-ai-for-marketing" target="_blank">
+                <div class="course-card">
+                    <img src="/photos/image12.png" alt="Digital Marketing" class="course-image">
+                    <div class="course-content">
+                        <div class="university-info">
+                            <div class="university-logo">🏛️</div>
+                            <div class="university-name">MindX</div>
+                        </div>
+                        <h3 class="course-title">AI For Marketing</h3>
+                        <div class="course-meta text-blue">
+                            <span>👁️ Nhận bằng</span>
+                        </div>
+                        <div class="course-meta">
+                            <span>Bằng cấp</span>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+
+
+
             <div class="buttons">
                 <a href="#" class="btn-primary">Hiển thị thêm 8</a>
                 <a href="#" class="btn-secondary">Xem tất cả →</a>
