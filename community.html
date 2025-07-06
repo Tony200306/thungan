@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cộng đồng - Udemy Clone</title>
+    <link rel="stylesheet" href="CSS_folder/community.css">
+</head>
+
+<body>
+    <div class="chat-container">
+        <!-- Sidebar với danh sách cuộc hội thoại -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div style="display: flex; align-items: center; gap: 10px;margin-bottom: 10px;">
+                    <button style="display: flex; color:aliceblue ; background-color: #007bff; border: none; padding: 5px 10px; border-radius: 5px;" class="back-btn" onclick="window.location.href='index.html'">
+                        <svg class="back-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 12H5m7-7l-7 7 7 7" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Quay lại</span>
+                    </button>
+                    <h2>Cộng đồng</h2>
+                </div>
+
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <span class="search-icon">🔍</span>
+                </div>
+            </div>
+
+            <div class="conversations-list">
+                <div class="conversation-item active" data-conversation="it-business">
+                    <div class="avatar"></div>
+                    <div class="conversation-info">
+                        <h4>Tìm hiểu về IT Business Analyst</h4>
+                        <p>Chào anh/chị, em là sinh viên học tiếng Anh thường...</p>
+                    </div>
+                </div>
+
+                <div class="conversation-item" data-conversation="interview">
+                    <div class="avatar"></div>
+                    <div class="conversation-info">
+                        <h4>Chia sẻ kinh nghiệm phỏng vấn</h4>
+                        <p>Mình vừa qua vòng phỏng vấn đầu tiên...</p>
+                    </div>
+                </div>
+
+                <div class="conversation-item" data-conversation="cv-review">
+                    <div class="avatar"></div>
+                    <div class="conversation-info">
+                        <h4>Review CV xin việc</h4>
+                        <p>Mọi người có thể review CV của mình không...</p>
+                    </div>
+                </div>
+
+                <div class="conversation-item" data-conversation="marketing">
+                    <div class="avatar"></div>
+                    <div class="conversation-info">
+                        <h4>Tìm hiểu về Marketing</h4>
+                        <p>Các bạn có kinh nghiệm làm marketing không...</p>
+                    </div>
+                </div>
+
+                <div class="conversation-item" data-conversation="job-sharing">
+                    <div class="avatar"></div>
+                    <div class="conversation-info">
+                        <h4>Chia sẻ cơ hội việc làm</h4>
+                        <p>Công ty mình đang tuyển developer...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="sign-in-btn">→ Sign in</button>
+            </div>
+        </div>
+
+        <!-- Khu vực chat chính -->
+        <div class="chat-area">
+            <div class="chat-header">
+                <h3 id="chat-title">Tìm hiểu về IT Business Analyst</h3>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <!-- Tin nhắn sẽ được load động -->
+            </div>
+
+            <div class="chat-input-container">
+                <button class="attach-btn">📎</button>
+                <button class="image-btn">🖼️</button>
+                <button class="gift-btn">🎁</button>
+                <button class="gif-btn">GIF</button>
+                <input type="text" class="chat-input" placeholder="Nhập tin nhắn...">
+                <button class="send-btn">😊</button>
+                <button class="wave-btn">👋</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/community.js"></script>
+</body>
+
+</html>
